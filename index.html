@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Página Estudante</title>
+</head>
+
+<body id="corpo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="text-align: center">
+                    <img id="logo" class="logo" alt="logo"
+                        src="cach.png" />
+                        <br><br>
+                </div>
+                <h3 class="text-center" style="font-style: italic;">
+                    Comportamento Estudantil 
+                </h3>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Turma
+                            </th>
+                            <th>
+                                Atenção as aulas
+                            </th>
+                            <th>
+                                Desenvolvimento
+                            </th>
+                            <th>
+                                Criatividade
+                            </th>
+                            <th>
+                                Qualidade de entrega
+                            </th>
+                            <th>
+                                Sobre
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="escola"></tbody>
+                </table>
+                <dl>
+                    Selecione o estudante desejado para obter mais informações
+                </dl>
+
+                <!-- Botão Novo Cliente -->
+                <div class="text-center">
+                    <button class="btn btn-primary" id="btnNovoEstudante">Novo Estudante</button>
+                </div>
+
+                <!-- Modal Novo Cliente -->
+                <div id="modalNovoEstudante" class="modal">
+                    <div class="modal-content">
+                        <div class="choro">
+                            <span class="close">&times;</span>
+                            <h2>Cadastrar Novo Estudante</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formNovoEstudante">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" required>
+
+                                <label for="turma">Turma:</label>
+                                <input type="text" id="turma" required>
+
+                                <label for="atencao">Atenção as aulas:</label>
+                                <select id="atencao" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <label for="desenvolvimento">Desenvolvimento:</label>
+                                <select id="desenvolvimento" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <label for="criatividade">Criatividade:</label>
+                                <select id="criatividade" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <label for="qualidadeEntrega"> Qualidade de entrega:</label>
+                                <select id="qualidadeEntrega" required>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Médio">Médio</option>
+                                    <option value="Bom">Bom</option>
+                                </select>
+
+                                <button type="button" onclick="cadastrarEstudante()">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Informações do Cliente -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Informações do Estudante</h2>
+                        <p>Nome: <span id="nomeModal"></span></p>
+                        <p>Turma: <span id="turmaModal"></span></p>
+                        <p>Atenção as aulas: <span id="atencaoModal"></span></p>
+                        <p>Desenvolvimento: <span id="desenvolvimentoModal"></span></p>
+                        <p>Criatividade: <span id="criatividadeModal"></span></p>
+                        <p>Qualidade de entrega: <span id="qualidadeEntregaModal"></span></p>
+                        <button id="btnExcluirEstudante">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

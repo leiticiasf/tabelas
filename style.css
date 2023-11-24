@@ -1,0 +1,194 @@
+/* Estilos gerais para o body e tabela */
+body {
+    /* Fundo gradiente para o body */
+    background-image: linear-gradient(to bottom, rgb(63, 109, 105), rgb(184, 217, 213)   );
+    font-family: DejaVu Sans Mono, monospace;
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+table {
+    /* Estilos para a tabela */
+    width: 30%;
+    margin: auto;
+}
+
+dl {
+    /* Alinhamento central para a descrição */
+    text-align: center;
+}
+
+td,
+th,
+tr {
+    /* Estilos para as células da tabela */
+    border: 2px solid #ffffff;
+    text-align: center;
+    background-color: #97b9c5;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* Estilos para a logo */
+.logo {
+    /* Estilos para a logo */
+    margin-top: 1%;
+    width: 10%;
+    height: 10%;
+}
+
+/* Estilos para os botões e modal novo cliente */
+#modalNovoEstudante button,
+#btnNovoEstudante {
+    /* Estilos para os botões e o botão Novo Cliente */
+    background-color: #88868c;
+    color: #292f42;
+    padding: 10px;
+    font-size: 16px;
+    border-color: #4b4949;
+    cursor: pointer;
+    font-weight:bolder;
+    border-style:groove;
+}
+
+
+#modalNovoEstudante button:hover,
+#btnNovoEstudante:hover {
+    /* Efeito hover para os botões e o botão Novo Cliente */
+    background-color: #5d749d;
+    
+}
+
+/* Estilos para o modal */
+.modal {
+    /* Estilos gerais para o modal */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para o conteúdo do modal de informações do cliente */
+#myModal .modal-content {
+    /* Estilos para o conteúdo do modal de informações do cliente */
+    position: fixed;
+    background-color: #54555f;
+    width: 100%;
+    color: white;
+    
+}
+
+/* Estilos para o conteúdo do modal de novo cliente */
+#modalNovoEstudante .modal-content-novo-estudante {
+    /* Estilos para o conteúdo do modal de novo cliente */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Estilos para o botão Fechar */
+.close {
+    /* Estilos para o botão Fechar */
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    /* Efeito hover para o botão Fechar */
+    color: #ff0b0b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para o cabeçalho, corpo e rodapé do modal */
+.modal-header,
+.modal-body,
+.modal-footer {
+    /* Estilos para o cabeçalho, corpo e rodapé do modal */
+    padding: 2px 16px;
+    background-color: #627362;
+    color: rgb(203, 255, 196);
+
+
+}
+
+/* Adicionar Animação */
+@-webkit-keyframes slideIn {
+
+    /* Animação de slideIn para o modal */
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+
+    /* Animação de slideIn para o modal */
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+
+    /* Animação de fadeIn para o modal */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+
+    /* Animação de fadeIn para o modal */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.choro{
+    flex-shrink: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #2e582e;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+    background-color: #3f4a3f;
+    color:rgb(203, 255, 196);
+
+}
+
+#but{
+    text-align: center;
+}
